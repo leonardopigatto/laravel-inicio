@@ -63,6 +63,20 @@ services:
                 - ping
             retries: 3
             timeout: 5s
+    phpmyadmin:
+        image: 'phpmyadmin/phpmyadmin'
+        ports:
+            - '8090:80'
+        environment:
+            PMA_ARBITRARY: 1
+            UPLOAD_LIMIT: 10000000000
+            PMA_HOST: 'mysql'
+            PMA_USER: '${DB_USERNAME}'
+            PMA_PASSWORD: '${DB_PASSWORD}'
+        links:
+            - mysql
+        networks:
+            - sail
 networks:
     sail:
         driver: bridge
