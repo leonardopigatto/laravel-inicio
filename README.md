@@ -12,10 +12,10 @@ Laravel Início é o projeto base para o desenvolvimento de qualquer outro proje
 - [x] phpMyAdmin
 - [x] Redis
 
-Porta das aplicações:
+### Porta das aplicações:
 
 - Aplicação: `80`
-- Mysql: `3306`
+- MysSQL: `3306`
 - phpMyAdmin: `8090`
 - Redis: `6369`
 
