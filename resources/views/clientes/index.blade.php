@@ -4,9 +4,9 @@
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight mt-1">
                 {{ __('Clientes') }}
             </h2>
-            <x-primary-button :href="route('clientes.create')">
+            <x-primary-link href="{{ route('clientes.create') }}">
                 {{ __('Cadastrar') }}
-            </x-primary-button>
+            </x-primary-link>
         </div>
     </x-slot>
 
@@ -29,9 +29,9 @@
                                 <td class="border px-6 py-4">
                                     <div class="flex gap-5">
                                         <div>
-                                            <x-secondary-button>
+                                            <x-secondary-link href="{{ route('clientes.edit', $cliente) }}">
                                                 {{ __('Editar') }}
-                                            </x-secondary-button>
+                                            </x-secondary-link>
                                         </div>
                                         <div>
                                             <form method="post" action="{{ route('clientes.destroy', $cliente) }}">
